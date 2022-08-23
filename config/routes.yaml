@@ -1,3 +1,13 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+employee_list:
+    path:       /listing/{id}
+    controller: App\Controller\EmployeeController::listing
+    requirements:
+        page: '\d+'
+
+employee_show:
+    path:       /employee/{slug}
+    controller: App\Controller\EmployeeController::show
